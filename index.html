@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player de Áudio - Versões</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- ============================================
+             GRAVAÇÃO 1 — MOZART
+             ============================================ -->
+        <section class="gravacao" id="gravacao-mozart">
+            <header class="cabecalho">
+                <h1 class="titulo-principal">Orquestra de Cordas - Festival apArte</h1>
+                <p class="subtitulo">Mozart: Pequena Serenata Noturna, V. Rondo: Allegro.<br>
+                    Gravado ao vivo na Sala Cecília Meireles, Rio de Janeiro, Brasil.
+                </p>
+                <p class="descricao">
+                    Pré-amplificadores: RME Octamic II. 8 canais - formato: MP3 48kHz/320kbps.
+                </p>
+                <p class="descricao">
+                    EQ: -4dB @ 5kHz (para reduzir um timbre "estridente" decorrente da acústica da sala e da
+                    equalização para campo difuso dos microfones omnidirecionais).
+                </p>
+                <p class="descricao">
+                    Altura do Sistema de Microfones Principais: 290cm.
+                </p>
+            </header>
+
+            <div class="player-overlay" id="overlay-mozart">
+                <img src="imagens/capa-mozart.png" alt="Capa" class="capa" id="capa-mozart">
+
+                <div class="overlay-topo">
+                    <div class="versoes" id="versoes-mozart"></div>
+                    <span class="faixa-descricao" id="descricao-mozart"></span>
+                    <span class="faixa-titulo sr-only" id="titulo-mozart">Clique para ouvir cada microfone</span>
+                </div>
+
+                <div class="overlay-base">
+                    <button id="play-mozart" class="btn-play" aria-label="Play/Pause">
+                        <span id="icone-mozart">▶</span>
+                    </button>
+
+                    <div class="barra-wrap">
+                        <span class="tempo" id="tempoAtual-mozart">00:00</span>
+                        <input type="range" id="barra-mozart" min="0" max="100" value="0" step="0.1">
+                        <span class="tempo" id="tempoTotal-mozart">00:00</span>
+                    </div>
+
+                    <div class="volume-wrap">
+                        <button id="mudo-mozart" class="btn-volume" aria-label="Mudo">🔊</button>
+                        <input type="range" id="volume-mozart" min="0" max="100" value="100" step="1">
+                    </div>
+                </div>
+
+                <div class="buffering" id="buffering-mozart" aria-hidden="true">
+                    <span class="spinner"></span>
+                </div>
+            </div>
+
+            <section class="galeria-cta">
+                <button id="btnGaleria-mozart" class="btn-galeria">
+                    <img src="imagens/galerias/mozart/thumb.jpg" alt="" class="thumb-galeria">
+                    <span>Ver galeria de fotos</span>
+                </button>
+            </section>
+        </section>
+
+        <!-- ============================================
+             GRAVAÇÃO 2 — DVOŘÁK
+             ============================================ -->
+        <section class="gravacao" id="gravacao-dvorak">
+            <header class="cabecalho">
+                <h1 class="titulo-principal">Orquestra Sinfônica da UFRJ</h1>
+                <p class="subtitulo">Dvorak: Sinfonia nº 8, IV. Allegro ma non troppo<br>
+                Gravado ao vivo na Sala Cecília Meireles, Rio de Janeiro, Brasil.
+                </p>
+                <p class="descricao">
+                    Pré-amplificadores: RME Octamic II e MOTU 896mk3. 15 canais - formato: MP3 48kHz/320kbps.
+                </p>
+                <p class="descricao">
+                    EQ: -6dB @ 120Hz (para reduzir a percepção da reverberação dos tímpanos)
+                </p>
+                <p class="descricao">
+                    Altura do Sistema de Microfones Principais: 240cm.
+                </p>
+            </header>
+
+            <div class="player-overlay" id="overlay-dvorak">
+                <img src="imagens/capa-dvorak.png" alt="Capa" class="capa" id="capa-dvorak">
+
+                <div class="overlay-topo">
+                    <div class="versoes" id="versoes-dvorak"></div>
+                    <span class="faixa-descricao" id="descricao-dvorak"></span>
+                    <span class="faixa-titulo sr-only" id="titulo-dvorak">Clique para ouvir cada microfone</span>
+                </div>
+
+                <div class="overlay-base">
+                    <button id="play-dvorak" class="btn-play" aria-label="Play/Pause">
+                        <span id="icone-dvorak">▶</span>
+                    </button>
+
+                    <div class="barra-wrap">
+                        <span class="tempo" id="tempoAtual-dvorak">00:00</span>
+                        <input type="range" id="barra-dvorak" min="0" max="100" value="0" step="0.1">
+                        <span class="tempo" id="tempoTotal-dvorak">00:00</span>
+                    </div>
+
+                    <div class="volume-wrap">
+                        <button id="mudo-dvorak" class="btn-volume" aria-label="Mudo">🔊</button>
+                        <input type="range" id="volume-dvorak" min="0" max="100" value="100" step="1">
+                    </div>
+                </div>
+
+                <div class="buffering" id="buffering-dvorak" aria-hidden="true">
+                    <span class="spinner"></span>
+                </div>
+            </div>
+
+            <section class="galeria-cta">
+                <button id="btnGaleria-dvorak" class="btn-galeria">
+                    <img src="imagens/galerias/dvorak/thumb.jpg" alt="" class="thumb-galeria">
+                    <span>Ver galeria de fotos</span>
+                </button>
+            </section>
+        </section>
+
+
+    <!-- ============================================
+             GRAVAÇÃO 3 — MAHLER
+             ============================================ -->
+        <section class="gravacao" id="gravacao-mahler">
+            <header class="cabecalho">
+                <h1 class="titulo-principal">Orquestra Sinfônica da UFRJ.
+                    Marcelo Coutinho, barítono
+                </h1>
+                <p class="subtitulo">Mahler: Lieder eines fahrenden Gesellen<br>
+                Gravado ao vivo na Sala Cecília Meireles, Rio de Janeiro, Brasil.
+                </p>
+                <p class="descricao">
+                    Pré-amplificadores: RME Octamic II e MOTU 896mk3. 16 canais - formato: MP3 48kHz/320kbps.
+                </p>
+                <p class="descricao">
+                    EQ: -6dB @ 120Hz (para reduzir a percepção da reverberação dos tímpanos)
+                </p>
+            </header>
+
+            <div class="player-overlay" id="overlay-mahler">
+                <img src="imagens/capa-mahler.png" alt="Capa" class="capa" id="capa-mahler">
+
+                <div class="overlay-topo">
+                    <div class="versoes" id="versoes-mahler"></div>
+                    <span class="faixa-descricao" id="descricao-mahler"></span>
+                    <span class="faixa-titulo sr-only" id="titulo-mahler">Clique para ouvir cada microfone</span>
+                </div>
+
+                <div class="overlay-base">
+                    <button id="play-mahler" class="btn-play" aria-label="Play/Pause">
+                        <span id="icone-mahler">▶</span>
+                    </button>
+
+                    <div class="barra-wrap">
+                        <span class="tempo" id="tempoAtual-mahler">00:00</span>
+                        <input type="range" id="barra-mahler" min="0" max="100" value="0" step="0.1">
+                        <span class="tempo" id="tempoTotal-mahler">00:00</span>
+                    </div>
+
+                    <div class="volume-wrap">
+                        <button id="mudo-mahler" class="btn-volume" aria-label="Mudo">🔊</button>
+                        <input type="range" id="volume-mahler" min="0" max="100" value="100" step="1">
+                    </div>
+                </div>
+
+                <div class="buffering" id="buffering-mahler" aria-hidden="true">
+                    <span class="spinner"></span>
+                </div>
+            </div>
+        </div>
+
+    <!-- Dialog único da galeria (compartilhado) -->
+    <dialog id="dialogGaleria" class="dialog-galeria">
+        <div class="galeria-wrap">
+            <button class="galeria-fechar" id="btnFecharGaleria" aria-label="Fechar">✕</button>
+            <button class="galeria-nav anterior" id="btnAnterior" aria-label="Anterior">‹</button>
+            <img id="imagemGaleria" src="" alt="">
+            <button class="galeria-nav proximo" id="btnProximo" aria-label="Próximo">›</button>
+            <div class="galeria-contador" id="contadorGaleria">1 / 1</div>
+        </div>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
